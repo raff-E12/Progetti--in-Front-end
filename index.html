@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Controlla la Console di Sviluppo con F12.</h1>
+    <script>
+        function esercizio_1() {
+       setTimeout(()=>{
+        console.log('Contare fino a 11.');
+        let index_num = 0;
+        let text_number = 0;
+        let list_number = [];
+        for (let i = 0; i < 11; i++) {
+            text_number = index_num++;
+            list_number.push(text_number);
+        }
+        console.log(list_number);
+        esercizio_2();
+       }, 1000)
+        }
+
+        function esercizio_2(){
+            setTimeout(()=>{
+            console.log('Cercare i Multipli di 2.')
+            let numb_index = 0;
+            let text_show = 0;
+            let numb_list = [];
+            while(numb_index < 11){
+                text_show = numb_index * 2;
+                numb_list.push(text_show);
+                numb_index++;
+            }
+            console.log(numb_list);
+            esercizio_3();
+            }, 1200)
+        }
+
+        function esercizio_3(){
+            setTimeout(()=>{
+            console.log('Dividere la stringa.');
+            const index_num = 0;
+            let string_es = 'HelloWorld';
+            let array_list = string_es.split("", 11);
+            let string_con =  array_list.join('-');
+            console.log(string_con);
+            esercizio_4();
+            }, 1500)
+        }
+
+        function esercizio_4(){
+           setTimeout(()=>{
+            console.log('Somma di tutti numeri gli array.');
+            let list_array = [0,1,2,3,4,5,6,7,8,9,10,11];
+            let text_show = 0;
+            for (let i = 0; i < list_array.length; i++) {
+                text_show += list_array[i];
+            }
+            console.log(text_show);
+            esercizio_5();
+           }, 1600)
+        }
+
+        function esercizio_5() {
+         setTimeout(()=>{
+            console.log('Stampare i numeri pari fino a 20');
+            let list = [];
+            for (let i = 0; i < 20; i++) {
+                if (i % 2 === 0) {
+                    list.push(i);
+                }
+            }
+            console.log(list);
+            esercizio_6();
+         }, 1700)
+        }
+
+        function esercizio_6(){
+            console.log('Trova il numero più grande in una lista.');
+            const list_num = [0,1,2,3,4,5,6,7,8,9,10,11];
+            let numb_max = 0;
+            for (let i = 0; i < list_num.length; i++) {
+                numb_max = Math.max(list_num[i]);
+            }
+            console.log(numb_max);
+            esercizio_7();
+        }
+
+        function esercizio_7(){
+            console.log('Trova il numero nella lista');
+            const list_num = [0,1,2,3,4,5,6,7,8,9,10,11];
+            let numb_ind = 0;
+            let index = 0;
+            while(index < list_num.length){
+                if (index === 4) {
+                    numb_ind = list_num[index];
+                }
+                index++;
+            }
+            console.log(numb_ind);
+            esercizio_8();
+        }
+
+        async function esercizio_8(){
+        console.log('Filtra e crea un array con i numeri.');
+            try {
+                let fetching = await fetch("number_list.json");
+                let data = await fetching.json();
+                let list_imp = [];
+                let numb = data[0];
+                numb.forEach(element => {
+                    if (element % 2 == 0) {
+                        list_imp.push(element);
+                    }
+                });
+                console.log(numb);
+                console.log(list_imp);
+                esercizio_9();
+            } catch (error) {
+                console.log('ti consiglio di riprovare.');
+            }
+        }
+
+        function esercizio_9(){
+           setTimeout(()=>{
+            console.log("Trova l'occorrenza di un array.");
+            let list_numb = ['H', 'I', 'L', 'M', 'N', 'O', 'P', 'M', 'N', 'W', 'Q', 'N', 'M', 'Z'];
+            let numb_index = '';
+            let index = 0;
+            list_numb.forEach(element => {
+                if (element === 'N') {
+                    index++;
+                    numb_index = "Quante volte appare N:" + index;
+                } 
+            })
+            console.log(numb_index);
+            esercizio_10();
+           }, 1900)
+        }
+
+        function esercizio_10(){
+            setTimeout(()=>{
+                console.log('Verifica se i numeri sono positivi.');
+                let cont = 0;
+                let txt_numb = '';
+                const list_numb = [11, 12, 13, 14, 15, 16, 17, 18, -19, 20];
+                list_numb.forEach((element)=>{
+                    if (element > 0) {
+                        cont++;
+                        txt_numb = 'Quanti Numeri sono positivi:' + cont;
+                    }
+                });
+                console.log(txt_numb);
+                esercizio_11();
+            }, 1200)
+        }
+
+        function esercizio_11() {
+            setTimeout(()=>{
+            console.log('Crea una classe Persona.');
+            class Persona{
+                constructor(){
+                    this.name = ' Gugliemo';
+                    this.cognome = 'Marconi';
+                    this.say = '  è ciao a tutti.';
+                }
+
+                static age = 69;
+                
+                Talk(){
+                    let text = '';
+                    text = "Ciao mi chiamo " + this.name + this.say;
+                    return text;
+                }
+            }
+            let nome = new Persona();
+            console.log(nome.Talk());
+            console.log('è ho ',Persona.age , ' anni.');
+            },1500);
+        }
+
+        esercizio_1(()=>{
+            esercizio_2(()=>{
+                esercizio_3(()=>{
+                    esercizio_4(()=>{
+                        esercizio_5(()=>{
+                            esercizio_6(()=>{
+                                esercizio_7(()=>{
+                                    esercizio_8(()=>{
+                                        esercizio_9(()=>{
+                                            esercizio_10(()=>{
+                                                esercizio_11();
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+</html>

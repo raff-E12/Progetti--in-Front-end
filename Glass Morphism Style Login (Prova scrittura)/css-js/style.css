@@ -1,0 +1,289 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 46.28px;
+    font-family: "Gabarito", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+h2{
+    font-size: 38.57px;
+    font-family: "Gabarito", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+h3{
+    font-size: 32.14px;
+    font-family: "Gabarito", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+h4{
+    font-size: 26.78px;
+    font-family: "Gabarito", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h5{
+    font-size: 22.32px;
+    font-family: "Gabarito", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h6{
+    font-size: 18.6px;
+    font-family: "Gabarito", serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+p{
+    font-family: 15.5px;
+    font-family: "Gabarito", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.body-grad{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+#video-bg{
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    height: 800px;
+}
+
+.form{
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #033030;
+    width: 40%;
+    border-radius: 10px;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.138);
+    backdrop-filter: blur(40px);
+    transform-style: preserve-3d;
+    transform: translateZ(20px);
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 20px 10px rgba(40, 40, 40, 0.517), 0px 0px 100px 10px rgba(84, 84, 84, 0.596);
+    animation-name: form-animation;
+    animation-timing-function: ease-in;
+    animation-duration:  .90s;
+    animation-delay: 0.1s;
+    transition: all .3s linear;
+}
+
+@keyframes form-animation {
+    0%{opacity: 0;}
+    10%{opacity: 10%; transform: scale(0.1, 0);}
+    20%{opacity: 20%; transform: scale(0.1, 0.2);}
+    100%{opacity: 100%; transform: scale(1, 1);}
+}
+
+.text-login{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.text-login h2{
+    pointer-events: none;
+    user-select: none;
+}
+
+.form-inp{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.email-sc{
+    width: 100%;
+    height: 78px;
+    position: relative;
+    padding: 4px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.email-sc input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-family: "Gabarito", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 3px;
+}
+
+.email-sc h4{
+    position: absolute;
+    color: #000000;
+    z-index: 10;
+    left: 10px;
+    bottom: 6px;
+    pointer-events: none;
+    color: #8f8f8f;
+    transition: all 0.3s linear;
+}
+
+.email-sc #txt-em.focus{
+    font-size: 20px;
+    top: 0;
+    bottom: 0;
+    left: 4px;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+.passwd-sc{
+    width: 100%;
+    height: 78px;
+    position: relative;
+    padding: 4px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.passwd-sc input{
+    width: 100%;
+    position: relative;
+    height: 40px;
+    bottom: 0;
+    padding: 10px;
+    font-family: "Gabarito", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 3px;
+}
+
+.passwd-sc h4{
+    position: absolute;
+    color: #000000;
+    z-index: 10;
+    bottom: 7px;
+    left: 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    transition: all 0.3s linear;
+}
+
+.passwd-sc #txt-ps.focus-ps{
+    font-size: 20px;
+    top: 0;
+    bottom: 0;
+    left: 4px;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+
+#btn-passwd{
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 4px;
+    background-color: #107373;
+}
+
+#btn-passwd .fa-eye-slash{
+    display: none;
+}
+
+.sc-link-pass-forgot{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.btn-sc{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-sub{
+    width: 60%;
+    padding: 6px;
+    height: 46px;
+    color: #ffffff;
+    background-color: #107373;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#btn-sub:hover{
+    background-color: #033d3d;
+}
+
+#btn-sub:active{
+    background-color: #033030;
+    font-size: 10px;
+}
+
+#btn-sub h4:active{
+    font-size: 20px;
+}
+
+#btn-passwd:hover{
+    background-color: #033d3d;
+}
+
+#btn-passwd:active{
+    background-color: #033030;
+    font-size: 20px;
+}
+
+#btn-passwd i:active{
+    font-size: 20px;
+}
+
+#link-pass:hover{
+    color: #033030;
+}

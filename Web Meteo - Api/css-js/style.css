@@ -1,0 +1,218 @@
+
+.container-fluid.box-container-weather{
+    background-color: #3E4042;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 110vh;
+}
+
+.container.box-weather{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../img/bg_app.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    padding: 20px;
+    gap: 10px;
+    box-shadow: 0px 0px 20px 2px #121213;
+}
+
+.result-show h4{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+    color: #ECF0F3;
+    padding: 10px;
+}
+
+.box-top-icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 80%;
+}
+
+.btn.btn-top{
+    border: 2px solid #ECF0F3;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    font-size: 15px;
+    color: #ECF0F3;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-show{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.img-rf{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    mask-image: linear-gradient(to top,black 15%,transparent 100%);
+}
+
+.img-scroller{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+    transform: translateY(0%);
+    transition: all ease-in-out .90s;
+}
+
+.img-cont{
+    width: 100px;
+    height: 100px;
+}
+
+#text-temp{
+    text-transform: capitalize;
+}
+
+.img-cont img{
+    width: 100%;
+}
+
+.text-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px;
+}
+
+.text-info h2, .text-info p{
+    margin: 0;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #ECF0F3;
+}
+
+.info-bottom-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3px;
+    height: 70px;
+}
+
+.bottom-info-box{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 5px;
+    color: #ECF0F3;
+    gap: 9px;
+}
+
+.bottom-info-box p{
+    margin: 0;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.cn-img-bt{
+    width: 30px;
+    height: 30px;
+}
+
+.cn-img-bt img{
+    width: 100%;
+}
+
+.search-box{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #ecf0f34d;
+    backdrop-filter: blur(60px);
+    border-radius: 100px;
+    padding: 0;
+    gap: 10px;
+}
+
+.input-weather-sr{
+    width: 70%;
+    outline: none;
+    padding: 7px;
+    text-transform: capitalize;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn.btn-search{
+    color: #ECF0F3;
+    width: 39px;
+    height: 39px;
+    font-size: 18px;
+    padding: 0;
+    filter: drop-shadow(0px 0px 4px #ECF0F3);
+}
+
+.btn.btn-search:hover{
+    color: #3E4042;
+    filter: drop-shadow(0px 0px 0px #3E4042);
+}
+
+#error-box{
+    border: 2px solid #ECF0F3;
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    padding: 10px;
+    width: 400px;
+    background-color: #3E4042;
+    color: #ECF0F3;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all ease-in-out .90s;
+    gap: 90%;
+}
+
+#error-box h4{
+    font-size: 15px;
+    margin: 0;
+    font-weight: 400;
+}

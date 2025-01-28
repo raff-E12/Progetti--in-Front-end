@@ -1,0 +1,79 @@
+    let url_json = "css-js/fetching.json";
+       async function feching(url){
+        const response = await fetch(url);
+        if(response.ok){
+            const data = await response.json();
+            console.log(data);
+            const nome_1 = data.Primoalluno.nome;
+            console.log(nome_1);
+        }
+        else{
+            console.log("Errore di Sintassi");
+        }
+       }
+       feching(url_json);
+
+       let Stringa = "Hello World!!, Benvenuto.";
+        let array_list = ['0', '1', '2', '3', '4', '5', '6'];
+        let array_list_1 = ['7', '8', '9', '10', '11', '12'];
+        let array_list_2 = [];
+        let array_list_4 = [];
+        let array_list_3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let array_num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let function_1 = Stringa.indexOf('llo');
+        let function_2 = Stringa.lastIndexOf('!!');
+        let function_3 = Stringa.charAt(2);
+        let function_4 = Array.from(Stringa);
+        let number = 12;
+        let function_5 =  String(number).padStart(4, 22).padEnd(5, 11);
+        let function_6 = Stringa.split();
+        let function_7 = Stringa.slice(0, 9).split();
+        let function_8 = array_list_2.concat(array_list_1).concat(array_list).sort((a, b)=>{ return a-b;});
+        let function_9 = function_8.join(' ');
+        array_list_1.forEach((element)=>{
+            return array_list_2.push(Number(element));
+        });
+        array_list_3.forEach((element)=>{
+         if (element % 2 === 0) {
+            array_list_4.push(element);
+         }
+        });
+        console.log("Stringa Completa:", Stringa);
+        console.log(function_2);
+        console.log(function_1);
+        console.log(function_3);
+        console.log(function_4);
+        console.log(function_5);
+        console.log(function_6);
+        console.log(function_7);
+        console.log(function_8);
+        console.log(typeof function_9);
+        console.log(array_list_2.reduce((next, prev)=> next + prev));
+        console.log(array_list_4);
+
+        class MathRandom {
+        static limit = 20;
+
+        constructor(limit_num){
+            this.limit = limit_num;
+            this.randomNumber = Math.floor(Math.random() * this.limit);
+            this.text_num = this.randomNumber % 2 === 0 ? 'Pari' : 'Dispari';
+        }
+
+        getNumber() {
+            return this.randomNumber;
+        }
+
+        Ver_num(){
+            return this.text_num;
+        }
+    }
+
+    class getNumber extends MathRandom{
+       constructor(){
+        super(10); // chiamata di funzione classe;
+       }
+    }
+
+    const numb = new getNumber();
+    console.log(numb.getNumber())

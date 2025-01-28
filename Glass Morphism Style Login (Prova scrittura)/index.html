@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Login Site</title>
+    <link rel="stylesheet" href="css-js/style.css">
+    <link rel="stylesheet" href="css-js/css_reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e5c56a9a16.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Pacifico&family=Poppins&family=Quicksand:wght@446&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="body-grad">
+        <video src="img/back_body.mp4" autoplay loop preload="auto" id="video-bg"></video>
+        <div class="form" data-tilt>
+            <div class="text-login">
+                <h2>Loggin in your account</h2>
+            </div>
+            <div class="form-inp">
+                <div class="email-sc">
+                    <h4 id="txt-em">Email</h4>
+                    <input type="text" id="email-box">
+                </div>
+                <div class="passwd-sc">
+                    <h4 id="txt-ps">Password</h4>
+                    <input type="password" id="passwd-box">
+                    <button id="btn-passwd"><i class="fa-regular fa-eye"></i><i class="fa-solid fa-eye-slash"></i></button>
+                </div>
+                <div class="sc-link-pass-forgot"><a href="#" id="link-pass"><p>Forgot Password?</p></a></div>
+            </div>
+            <div class="btn-sc">
+                <button  id="btn-sub"><h4>Sign in</h4></button>
+            </div>
+        </div>
+    </div>
+    <script src="css-js/vanilla-tilt.js"></script>
+    <script src="css-js/scripts.js"></script>
+</body>
+</html>
